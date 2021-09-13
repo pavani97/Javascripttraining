@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function drag(ev){
+            ev.dataTransfer.setData("id",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var d=ev.dataTransfer.getData("id");
+            ev.target.appendChild(document.getElementById(d));
+        }
+        function allowDrop(ev){
+           ev.preventDefault(); 
+        }
+    </script>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <img id="drop1" src="C:\Users\mulugurthi.pavani\exercise24\src\htmlAPI\download.jpeg" width="300" draggable="true" ondragstart="drag(event)"/>
+</body>
+</html>

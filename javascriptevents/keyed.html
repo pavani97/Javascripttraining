@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Keyed collections in JavaScript</h1>
+<div class="result"></div>
+<br />
+<button class="Btn">CLICK HERE</button>
+<script>
+   let resEle = document.querySelector(".result");
+   let BtnEle = document.querySelector(".Btn");
+   BtnEle.addEventListener("click", () => {
+      let obj = {
+         name:'Rohan',
+         age:22,
+         occupation:'Student',
+      };
+      for(i in obj){
+         resEle.innerHTML += `key = ${i} : value = ${obj[i]} <br>`;
+      }
+   });
+</script>
+</body>
+</html>

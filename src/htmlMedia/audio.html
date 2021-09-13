@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var play,durationOutput,myInterval,elapsedOutput;
+            window.onload = function(){
+                document.getElementById('play').addEventListener('click',playMusic,false);
+                document.getElementById('stop').addEventListener('click',stopMusic,false);
+                play = document.getElementById('myaudio');
+                play.addEventListener('error',audioError,false);
+                play.addEventListener('error',mediaEnded,false);
+                durationOutput = document.getElementById('duration');
+                elapsedOutput = document.getElementById('elapsed');
+            }
+            function audioError(){
+                alert("audio has errored");
+            }
+            function mediaEnded(){
+                durationOutput.innerHTML = "";
+                elapsedOutput.innerHTML = "";
+                alert('media has completd playing');
+            }
+            function stopMusic(){
+                play.pause();
+            }
+            function playMusic(){
+                play.play();
+                durationOutput.innerHTML = Math.round(play.duration);
+                myInterval = setInterval(update,500);
+            }
+            function update(){
+               elapsedOutput.innerHTML = Math.round(play.currentTime); 
+            }
+        </script>
+    </head>
+    <body>
+        <audio id="myaudio">
+            <source src="address.mp3" type="audio/mp3"/>
+        </audio>
+        <p>Duration:<output id="duration"></output></p>
+        <p>Time elapsed:<output id="duration"></output></p>
+        <button id = "play">Play</button>
+
+        <button id = "stop">Stop</button>
+    </body>
+</html>

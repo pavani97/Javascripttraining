@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.addEventListener("load",function(){
+                document.getElementsByTagName("h1")[0].innerHTML="Hello world";
+            });
+            var a = window.applicationCache;
+            a.addEventListener("error",function(){
+                alert("cache failed to update");
+                document.getElementById("output").innerHTML +="<li>cache error has occurred</li>";
+            });
+            a.addEventListener("updateready",function(){
+                var r = confirm("an update version is ready")
+                if(refresh){
+                    location.reload();
+                }
+                document.getElementById("output").innerHTML+= "<li>cache ready to update</li>";
+            });
+            a.addEventListener("cached",function(){
+                document.getElementById("output").innerHTML+= "<li>application cached</li>";
+            })
+            a.addEventListener("checking",function(){
+                document.getElementById("output").innerHTML+= "<li>checking cached</li>";
+            })
+            a.addEventListener("downloading",function(){
+                document.getElementById("output").innerHTML+= "<li>cache is downloading</li>";
+            })
+            a.addEventListener("noupdate",function(){
+                document.getElementById("output").innerHTML+= "<li>no update</li>";
+            })
+            a.addEventListener("obsolate",function(){
+                document.getElementById("output").innerHTML+= "<li>manifest file returned a 404</li>";
+            })
+            a.addEventListener("progress",function(){
+                document.getElementById("output").innerHTML+= "<li>resourse is being fetched</li>";
+            })
+        </script>
+        <style>
+            #output{
+                background-color: white;
+                float:left;
+                width:200px;
+                margin-left: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>No heading</h1>
+        <ol id="output"></ol>
+        <img src="C:\Users\mulugurthi.pavani\exercise24\src\htmlAPI\images.jpeg" alt="online/offline image">
+    </body>
+</html>

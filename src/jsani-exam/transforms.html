@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--applies 2d r 3d to an element-->
+        <style>
+            div{
+                width: 200px;
+                height:100px;
+                background-color: yellow;
+                transform: rotate(7deg);
+                -ms-transform: rotate(7deg);
+                -webkit-transform: rotate(7deg);
+            }
+            div.trans2d{
+                background-color: yellow;
+                position: absolute;
+                top:10px;
+                left:10px;
+                transform:rotate(7deg) translate(150px,150px) scale(1.5,1.5);
+                -ms-transform:rotate(7deg) translate(150px,150px) scale(1.5,1.5);
+                -webkit-transform: rotate(7deg) translate(150px,150px) scale(1.5,1.5);
+            }
+            div.trans3d{
+                background-color: blue;
+                position: absolute;
+                top:300px;
+                left:400px;
+            }
+            div.main{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <div class="trans2d">2d</div>
+        <div class="trans3d">2d</div>
+    </div>
+    </body>
+</html>

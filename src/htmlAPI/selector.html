@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function clear(){
+                var a= document.querySelectorAll("#citylist li");
+                for(var i=0;i<a.length;i++){
+                    a[i].style.color="black";
+                }
+            }
+            function selectFirstBC() {
+                clear();
+                var BCr=document.querySelector("#citylist li.bc");
+                BCr.style.color="red";
+            };
+            function selectFirstAB() {
+                clear();
+                var ABr=document.querySelector("#citylist li.ab");
+                ABr.style.color="red";
+            };
+            function selectBC() {
+                clear();
+                var BC=document.querySelectorAll("#citylist li.bc");
+                for(var i=0;i<BC.length;i++){
+                    BC[i].style.color="red";
+                }
+            };
+            function selectAB() {
+                clear();
+                var AB=document.querySelectorAll("#citylist li.ab");
+                for(var i=0;i<AB.length;i++){
+                    AB[i].style.color="red";
+                }
+            };
+        </script>
+        <ul id="citylist">
+            <li class="bc">vancover</li>
+            <li class="ab">vjy</li>
+            <li class="bc">hyderabad</li>
+            <li class="ab">kolkata</li>
+        </ul>
+        <button onclick="selectFirstBC()">selectFirstBC</button>
+        <button onclick="selectFirstAB()">selectFirstAB</button>
+        <button onclick="selectBC()">selectBC</button>
+        <button onclick="selectAB()">selectAB</button>
+    </body>
+</html>

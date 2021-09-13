@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var playing;
+            var player;
+            //dynamically loading audio into player
+            window.onload = function(){
+                playing = 0;
+                document.getElementById('next').addEventListener('click',nextSong,false);
+                player = document.getElementById('rach');
+            }
+             function nextSong(){
+                 if(playing == 0){
+                     player.pause();
+                     player.src = "audio.mp3";
+                     player.play();
+                     playing =1;
+                 }
+                 else{
+                     player.pause();
+                     player.src = "rach2.mp3";
+                     player.play();
+                     playing = 0;
+                 }
+             }
+        </script>
+    </head>
+    <body>
+        <audio controls="controls" preload ="preload" id="rach">
+            <source src="audio.mp3"/>
+        </audio><br>
+        <button id ="next">Next</button>
+    </body>
+</html>

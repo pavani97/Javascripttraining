@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <p id ="p1"></p>
+
+            <script>
+               let p1=document.getElementById("p1");
+               let myobj =[
+                   'apple',
+                   'bananas',
+                   'mango',
+                   'plums'
+               ];
+               //console.log(myobj.includes('apple'));
+               //console.log(myobj.indexOf('plums'));
+              // let pos = myobj.indexOf('plums');
+              // myobj.splice(pos,1);
+              myobj.sort();
+              myobj.reverse();
+               for(let i=1;i<=myobj.length;i++){
+                p1.innerHTML +="<br>Fruit "+ (i) +" is " +myobj[i-1];
+               }
+               
+            </script>
+        </body>
+    </head>
+</html>

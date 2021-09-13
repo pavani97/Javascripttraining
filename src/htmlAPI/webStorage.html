@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        function count(){
+            if(typeof(Storage)!=="undefined"){
+                if(localStorage.current){
+                  localStorage.current = Number(localStorage.current)+1;
+                }
+                else{
+                    localStorage.current =1;
+                }
+                document.getElementById("result").innerHTML ="you clicked button" + localStorage.current + "time";
+            }else{
+                alert("your browser doesnt support");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><button onclick="count()" type="button">count</button></p>
+    <div id="result"></div>
+</body>
+</html>

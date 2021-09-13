@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<head>
+    <script type="text/javascript">
+        function load() {
+            var img = new XMLHttpRequest();
+            img.onreadystatechange = function(){
+                if(img.readyState ==4 && img.status == 200){
+                    document.getElementById("daynight").innerHTML = img.responseText;
+
+                }
+            }
+          
+             img.open("GET","sunset.html",true)
+             img.send();
+            }
+  
+</script>
+</head>
+<body>
+    <div id="daynight"></div>
+<button id="loadit" onclick="load()" >sunset</button>
+<span id="daynight"></span>
+</body>
+
+</html>

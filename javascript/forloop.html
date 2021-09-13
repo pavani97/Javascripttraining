@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <p id ="p1"></p>
+            <p id ="p2"></p>
+            <script>
+               let p1=document.getElementById("p1");
+               //let myobj =[
+                   //'apple',
+                   //'bananas',
+                   //'peas',
+                  // 'plums'
+               //];
+               let myobj =[
+                   ['apple','W1',205],
+                   ['bananas','W2',206],
+                   ['peas','W3',207],
+                   ['plums','W3',208]
+               ];
+               //for( let i of myobj){
+               //p1.innerHTML += i + " ";
+
+               //}
+               for(let i=0;i<myobj.length;i++){
+                p1.innerHTML+="<br>Fruit "+ myobj[i][0] +" is located in " + myobj[i][1]+" and quantity is "+ myobj[i][2];
+               }
+               //for(let i=0;i<4;i++){
+                //p1.innerHTML += i + " ";
+               //}
+                let i=0;
+               // do{
+                   // i++;
+                   // p2.innerHTML+="<br>Fruit "+ (i) +" is " +myobj[i+1];
+               // }while( i< myobj.length);
+               //function myfruits(value,index,ar){
+                //p1.innerHTML+="<br>Fruit "+ (index+1) +" is " +value;
+               //};
+               //myobj.forEach(myfruits);
+            </script>
+        </body>
+    </head>
+</html>

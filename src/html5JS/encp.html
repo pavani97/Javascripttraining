@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function Mammal(species,sound)
+            {
+                this.species =species;
+                this.sound=sound;
+            }
+            Mammal.prototype={
+                constructor:Mammal,
+                makeSound:function(){
+                    console.log("iam "+ this.species +"and i"+ this.sound);
+                }
+            }
+             var cat =new Mammal("cat","meaow");
+             console.log(cat);
+             cat.makeSound();
+        </script>
+    </head>
+</html>

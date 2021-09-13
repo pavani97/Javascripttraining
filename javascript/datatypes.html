@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <body>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <!--datatypes,type conversion,if,conditional,logical-->
+    <script>
+        let p1 = document.getElementById("p1");
+        let p2 = document.getElementById("p2");
+        let p3 = document.getElementById("p3");
+        let t1 = true;
+        let e = null;
+        let n ="smith";
+        const color ='blue' //symbol
+        let veh ={
+            make:'buick',color:'blue',year:2019,
+            aboutMe:this.make+ " " +this.color+" "+this.year
+        }
+        //p1.innerHTML = veh.aboutMe();
+        //type conversion
+        let date = new Date();
+        let year = date.getFullYear();
+        let sy = year.toString();
+        //p1.innerHTML = typeof(sy);
+        //p1.innerHTML = Number(true);
+        //p1.innerHTML = parseInt(sy);
+         //let x=5,y=8,z=3; 
+        //if(x<10 || ++z){
+           // p1.innerHTML =(z);
+        //} 
+        let t = 'hello';
+       // if( t == 'hello'){
+        //    p2.innerHTML = `${t} welcome to page`;
+        //}
+        //else{
+         //   p2.innerHTML = `${t} try again `;
+       // }
+       p3.innerHTML =(t === 'hello') ? `${t} welcome again` : `try again`;
+    </script>
+</head>
+</body>
+</html>

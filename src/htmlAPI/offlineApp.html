@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function checkInter(){
+                if(navigator.onLine){
+                    alert("Online");
+                }
+                else{
+                    alert("Offline");
+                }
+            }
+            window.addEventListener('online',function(){
+                console.log('online');
+            })
+            window.addEventListener('offline',function(){
+                console.log('offline');
+            })
+        </script>
+    </head>
+    <body>
+        <button onclick="checkInter()" type="button">check Internet</button>
+    </body>
+</html>

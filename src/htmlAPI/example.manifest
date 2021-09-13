@@ -1,0 +1,9 @@
+CACHE MANIFEST
+#Version 2.1
+CACHE:
+    cacheApi.html
+
+NETWORK:
+*
+FALLBACK:
+C:\Users\mulugurthi.pavani\exercise24\src\htmlAPI\images.jpeg

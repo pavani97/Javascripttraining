@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <body>
+        <h3>javascript error handling</h3>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <button onclick="demo(2)">Button onclick event</button>
+    <script >
+        function demo(x){
+            "use strict";
+            var answer =0;
+            try{
+            let scores=[4,9,6,5,7];
+            answer =scores[x];
+            } catch{
+             answer ="invalid";
+            }
+            finally{
+                document.getElementById("p1").innerHTML="finally always execute";
+            }
+            document.getElementById("p2").innerHTML=answer;
+        
+        }
+    </script>
+</head>
+
+   
+</body>
+</html>

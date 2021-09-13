@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <body>
+        <h3>javascript string</h3>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <button onclick="demo('a string.')">Button</button>
+    <script >
+        function demo(x){
+          
+            document.getElementById("p2").innerHTML=`this is ${x},the length is ${x.length}`;
+        
+        }
+        let p=document.getElementById("p1");
+        let ss='javascript string methods';
+        //p.innerHTML = ss.toUpperCase();
+        //p.innerHTML = ss.substring(0,10).toUpperCase();
+        p.innerHTML = ss.substring(0,10).toUpperCase()+ss.substring(10,ss.length);
+    </script>
+</head>
+
+   
+</body>
+</html>
