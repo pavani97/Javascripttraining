@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-box {
+            position: absolute;
+            width: 37%;
+            height: 100%;
+            background-color: #00F0A8;
+
+        }
+
+        .forminside {
+            position: absolute;
+            display: flex;
+            z-index: 1;
+            width: 70%;
+            height: 80%;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgb(92, 90, 90);
+            top: 10%;
+            left: 14%;
+        }
+
+        .left {
+            width: 40%;
+        }
+
+        .right {
+            width: 70%;
+        }
+
+        .img {
+            position: absolute;
+            display: flex;
+            width: 17%;
+            height: 20%;
+            top: 32%;
+            left: 6%;
+        }
+
+        .help {
+            position: absolute;
+            right: 16px;
+        }
+
+        .header-text {
+            font-size: 1.5vw;
+            text-align: center;
+            margin-top: 13%;
+        }
+
+        .form-cred{
+            position: absolute;
+            padding-top: 2%;
+            width: 50%;
+            height: 60%;
+            left: 40%;
+        }
+
+        .form_text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.25vw;
+        }
+
+        .inputfield {
+            width: 95%;
+            padding: 3%;
+            margin: 3px 0 22px 0;
+            border: none;
+            background: hsl(0, 0%, 95%);
+        }
+
+        .forgot {
+            font-family: serif;
+            font-size: 1.25vw;
+            float: right;
+            padding-top: 0%;
+
+        }
+
+        .form-boxbtn {
+            background-color: #00F0A8;
+            color: black;
+            border: none;
+            border-radius: 55;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.25vw;
+            padding:3.2%;
+            padding-bottom:2.5% ;
+        }
+
+        .text {
+            font-family:'Times New Roman', Times, serif;
+            font-size: 1.25vw;
+            display: flex;
+            position: absolute;
+            top: 52%;
+            left: 6%;
+        }
+
+
+        @media screen and (max-width:414px) {
+
+            .form-box,
+            .left {
+                display: none;
+            }
+
+            .forminside {
+                width: 80%;
+                height: 90%;
+                top: 5%;
+                left: 10%;
+                background-color:white;
+            }
+
+            .right {
+                position: absolute;
+                height: 70%;
+                width: 100%;
+                top: 15%;
+            }
+
+            .help {
+                font-size: 4vw;
+            }
+
+            .header-text {
+                font-size: 4vw;
+            }
+
+            .form-cred {
+                width: 70%;
+                height: 60%;
+                left: 15%;
+            }
+
+            .form_text {
+                font-size: 4vw;
+            }
+
+            .inputfield {
+                font-size: 4vw;
+                width: 95%;
+                height: 7%;
+            }
+
+            .forgot {
+                font-size: 3vw;
+            }
+
+            .form-boxbtn {
+                font-size: 4vw;
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0px;">
+    <div class="form-box"></div>
+    <div class="forminside">
+        <div class="left">
+            <img class="img" src="C:\Users\mulugurthi.pavani\exercise24\car.jpg">
+            <p class="text"> India's first waterless
+                <br>car cleaning company
+            </p>
+        </div>
+        <div class="right">
+            <p class="help">Need help?</p>
+            <h3 class="header-text">Log in</h3>
+            <div class="form-cred">
+                <label> Email</label><br><br>
+                <input class="inputfield" type="text" placeholder="joe@email.com">
+                <label> Password</label> <br><br>
+                <input class="inputfield" type="password" placeholder="Enter your password">
+                <p class="forgot">forgot password?</p><br>
+                <input class="form-boxbtn" type="button" value="Login">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
