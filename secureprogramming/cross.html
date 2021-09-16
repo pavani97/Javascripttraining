@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+    var invocation = new XMLHttpRequest();
+    var url = 'https://bar.other/resources/credentialed-content/';
+    
+    function callOtherDomain() {
+      if (invocation) {
+        invocation.open('GET', url, true);
+        invocation.onreadystatechange = handler;
+        invocation.send();
+      }
+    }
+    //var url = 'https://bar.other/resources/credentialed-content/';
+    
+    function callOtherDomainWithCredentials() {
+      if (invocation) {
+        invocation.open('GET', url, true);
+        invocation.withCredentials = true;
+        invocation.onreadystatechange = handler;
+        invocation.send();
+      }
+    }
+    function betterCORSRequest(method,url){
+        var xhr = new XMLHttpRequest();
+        if("withCredentilas" in xhr)
+        {
+            xhr.open(method, url ,true);
+        }
+        else if(typeof XDomainRequest != "undefined")
+        {
+          xhr = new XDomainRequest();
+          xhr.open(method,url);
+        }
+        else{
+            xhr =null;
+        }
+        return xhr;
+    }
+</script>
+
+</body>
+
+</html>

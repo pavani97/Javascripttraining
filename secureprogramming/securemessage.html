@@ -1,0 +1,28 @@
+
+</html><!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function sendMessage(message){
+                var t = window.open("https://www.somesite.com");
+                t.postMessage(message,"https://mysource.com");
+            }
+            window.addEventListener("message",recieveMessage,false);
+            function recieveMessage(event){
+                if(event.origin == "https://www.somesite.com")
+                {
+                var script= /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+                while(script.test(message)){
+                    message =message.replace(script,"");
+                }
+            }
+        }
+        </script>
+    </head>
+<body >
+    <form name="sampleform">
+    Message to send:<input type="text" name="message" required><br>
+    <input type ="button" value="sendMessage" onClick="sendMessage()">
+</form>
+</body>
+</html>
